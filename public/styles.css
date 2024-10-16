@@ -1,0 +1,650 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.schools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px 0;
+}
+.school-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul.pack-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    justify-items: center;
+    padding: 0;
+    list-style: none;
+    width: 95%;
+    margin: auto;
+}
+
+.school-card-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-color: transparent;
+    border: 5px solid transparent;
+    border-image: url('./scribble.svg') 10 round;
+    border-image-slice: 100 fill;
+    font-size: 15px;
+    color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.3s;
+}
+
+.image-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.school-name {
+    padding: 5px;
+    font-size: 1rem;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* Styles for the checkout container to fix it at bottom */
+.checkout-container {
+    position: fixed; /* Ensures container overlays other content */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background to emphasize overlay */
+    z-index: 1000; /* Ensure it overlays other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    padding: 20px; /* Adjust padding as needed */
+    overflow-y: auto; /* Allow scrolling if content is too long */
+}
+
+.receipt,
+.receipt ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.pack-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    border: 10px solid transparent;
+    border-image: url('./scribble.svg') 20 round;
+    border-image-slice: 100 fill;
+    -webkit-tap-highlight-color: transparent;  /* Disable tap highlight */
+
+}
+
+li.pack-card:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+li.pack-card .pack-content {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+li.pack-card .card-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: darkblue;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+li.pack-card .grade-text {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+li.pack-card .image-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+}
+
+li.pack-card .school-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+li.pack-card .pack-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+li.pack-card .price-wrapper {
+    margin-top: 10px;
+}
+
+li.pack-card .crtdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 0;
+}
+
+/* General Style for quantity buttons and value */
+.qty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty .dec,
+.qty .inc {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    color: #fff; /* Text color */
+    font-size: 18px; /* Font size for icons */
+    cursor: pointer; /* Cursor to pointer */
+    margin: 0 5px; /* Margin to space out the buttons */
+    transition: 0.5s; /* Smooth color transitions */
+}
+
+/* Specific colors for increment and decrement buttons */
+.qty .dec {
+    background-color: red; /* Background color for decrease button */
+}
+
+.qty .inc {
+    background-color: green; /* Background color for increase button */
+}
+
+/* Maintain colors on hover, focus, and active states */
+.qty .dec:hover,
+.qty .dec:focus,
+.qty .dec:active {
+    background-color: red; /* Ensure consistent red color for decrease button on interaction */
+    transform: scale(0.95);
+}
+
+.qty .inc:hover,
+.qty .inc:focus,
+.qty .inc:active {
+    background-color: green; /* Ensure consistent green color for increase button on interaction */
+    transform: scale(0.95);
+}
+
+.qty .num {
+    width: 40px; /* Width to align with buttons */
+    text-align: center; /* Center text */
+    font-size: 18px; /* Suitable font size */
+    color: #333; /* Dark text color */
+    margin: 0 5px; /* Spacing */
+    user-select: none; /* Prevent text selection */
+}
+
+.receipt {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1001;
+    margin-top: 20px;
+    text-align: left;
+}
+
+
+.clear-order-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button.clear-order {
+    outline: none;
+    border: 0;
+    background: red !important;
+    padding: 10px 20px;
+    color: #fff !important;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+button.clear-order:hover {
+    transform: scale(1.05);
+}
+
+button.clear-order:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    ul.pack-list {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .pack-card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .receipt {
+        padding: 10px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: auto;
+    }
+}
+
+/* Add padding and format adjustments for hero image area */
+.image-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.price-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.price-text {
+    position: relative;
+    z-index: 1;
+}
+
+.crtdiv {
+    width: 100%;
+    border-radius: 4px;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+/* General Style for quantity handlers and buttons */
+.qty .dec,
+.qty .inc {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    color: #fff; /* Text color */
+    font-size: 18px; /* Font size for icons */
+    cursor: pointer; /* Cursor to pointer */
+    margin: 0 5px; /* Margin to space out the buttons */
+    transition: 0.5s; /* Smooth color transitions */
+}
+
+.qty .dec {
+    background-color: red;
+}
+
+.qty .inc {
+    background-color: green;
+}
+
+.qty .dec:hover,
+.qty .dec:focus,
+.qty .dec:active {
+    background-color: red; /* Ensure consistent red color for decrease button on interaction */
+    transform: scale(0.95);
+    transition: 0.5s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+
+}
+
+.qty .dec:active {
+    transform: scale(0.85); /* Bounce effect on active state */
+}
+
+.qty .inc:hover,
+.qty .inc:focus,
+.qty .inc:active {
+    background-color: green; /* Ensure consistent green color for increase button on interaction */
+    transform: scale(0.95);
+    transition: 0.5s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+
+}
+
+.qty .inc:active {
+    transform: scale(0.85); /* Bounce effect on active state */
+}
+
+.qty .num {
+    width: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin: 0 5px;
+    user-select: none;
+}
+
+.receipt {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+    overflow: hidden; /* Hide overflow initially */
+    max-height: 400px; /* Max height for receipt */
+    padding-bottom: 70px; /* Bottom padding to accommodate button */
+
+}
+
+.total {
+    text-align: center; /* Centering the total */
+    margin-bottom: 20px;
+}
+
+.total strong {
+    display: block;
+    font-size: 18px;
+}
+
+.receipt ul {
+    text-align: center; /* Align all items within ul to center */
+}
+
+.receipt ul li.pack-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust gap between PACK and QUANTITY */
+}
+
+.clear-order-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;  /* Center vertically, if needed */
+    margin-top: 20px; /* Optional: Add some space before the button */
+}
+
+button.clear-order {
+    outline: none;
+    border: 0;
+    background: red !important; /* Red color for distinction */
+    padding: 10px 20px;
+    color: #fff !important;
+    border-radius: 10px; /* Set rounded corners */
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Light shadow */
+    text-align: center; /* Center text inside the button */
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+button.clear-order:hover {
+    transform: scale(1.05);
+}
+
+button.clear-order:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    ul.pack-list {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 10px;
+    }
+
+    li.pack-card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .receipt {
+        width: 90%; /* Adjust for padding around receipt */
+        padding: 10px;
+        margin: 0; /* Remove top margin on smaller screens */
+        box-shadow: none; /* Remove shadow */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    ul.pack-list {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 10px;
+    }
+
+    li.pack-card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .receipt {
+        padding: 10px;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+}
+
+/* Additional Styles for Scrollable Receipt */
+.receipt-placeholder {
+    /* Ensuring the receipt placeholder starts off with a minimum height */
+    min-height: 100px;
+}
+
+.receipt {
+    /* Displayed within a fixed container */
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    /* Dimensions */
+    width: calc(100% - 40px);
+    max-height: 400px; /* Max height for receipt scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin: 20px auto; /* Center the receipt */
+}
+
+/* Ensure the receipt looks good and is centered on mobile screens */
+@media (max-width: 768px) {
+    .checkout-container,
+    .receipt {
+        max-height: 200px; /* Slightly smaller max height for mobile */
+        padding-bottom: 70px;
+    }
+}
+
+.clear-order {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.clear-order:hover {
+    transform: scale(1.05);
+}
+
+.clear-order:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 900px) {
+    .schools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .school-card-button {
+        max-width: 150px;
+        height: 150px;
+    }
+
+    .image-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .school-name {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .schools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .school-card-button {
+        max-width: 120px;
+        height: 120px;
+    }
+
+    .image-container {
+        width: 40px;
+        height: 40px;
+    }
+
+    .school-name {
+        font-size: 0.7rem;
+    }
+}
+
+.school-card-button:focus,
+.school-card-button:active {
+    outline: none;
+    background: transparent;
+}
