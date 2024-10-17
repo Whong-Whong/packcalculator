@@ -14,7 +14,7 @@ app.use('/schools.json', express.static(path.join(__dirname, 'schools.json')));
 
 // Static HTML Routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, '', 'index.html'));
 });
 
 app.get('/grades', (req, res) => {
