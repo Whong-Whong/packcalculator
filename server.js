@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/grades', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'grades.html'));
+    res.sendFile(path.join(__dirname, '', 'grades.html'));
 });
 
 app.listen(port, () => {

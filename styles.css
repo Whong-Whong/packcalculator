@@ -54,7 +54,7 @@ ul.pack-list {
     height: 200px;
     background-color: transparent;
     border: 5px solid transparent;
-    border-image: url('scribble.svg') 10 round;
+    border-image: url('public/scribble.svg') 10 round;
     border-image-slice: 100 fill;
     font-size: 15px;
     color: black;
@@ -131,7 +131,7 @@ li.pack-card {
     text-align: center;
     background-color: transparent;
     border: 10px solid transparent;
-    border-image: url('scribble.svg') 20 round;
+    border-image: url('public/scribble.svg') 20 round;
     border-image-slice: 100 fill;
     -webkit-tap-highlight-color: transparent;  /* Disable tap highlight */
 
