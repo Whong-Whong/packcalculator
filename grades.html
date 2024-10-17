@@ -164,7 +164,7 @@
                         return;
                     }
 
-                    $('h1').text(`${school.name} Packs`);
+                    $('h1').html(`${school.name} <span>Packs</span>`);
 
                     let packsHtml = '';
                     school.packs.forEach(pack => {
@@ -203,15 +203,18 @@
     </script>
 </head>
 <body>
+    <button id="homeButton" class="home-button">
+        <i class="fa fa-home"></i>
+    </button>
+
     <h1></h1>
     <ul class="pack-list">
-        <!-- Packs will be dynamically loaded here -->
+      <!-- Packs will be dynamically loaded here -->
     </ul>
 
     <!-- Checkout Container -->
     <div class="checkout-container">
         <div class="receipt">
-            <!-- Placing total above other items -->
             <h2><u>Your Order Total:</u></h2>
             <div class="total">
                 <strong>TOTAL: R0.00</strong>
@@ -222,7 +225,17 @@
             </div>
         </div>
     </div>
-    <!-- Placeholder to push content above the receipt -->
     <div class="receipt-placeholder"></div>
+
+    <script>
+        $(document).ready(function () {
+            // Your existing jQuery code
+
+            // Home button click event listener
+            $("#homeButton").on("click", function () {
+                window.location.href = '/';
+            });
+        });
+    </script>
 </body>
 </html>
