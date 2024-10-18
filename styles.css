@@ -107,8 +107,54 @@ ul.pack-list {
     background: rgba(255, 255, 255, 0.9); /* Semi-transparent background to emphasize overlay */
     z-index: 1000; /* Ensure it overlays other content */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-    padding: 20px; /* Adjust padding as needed */
+    padding: 5px; /* Adjust padding as needed */
+    max-height: 40%; /* Set a maximum height for better visibility */
     overflow-y: auto; /* Allow scrolling if content is too long */
+    display: flex; /* Flexbox layout for better control */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space out elements to ensure button is visible */
+}
+
+.receipt {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1001;
+    margin-top: 20px;
+    text-align: center; /* Center content */
+    overflow: hidden; /* Hide overflow initially */
+}
+
+.clear-order-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;  /* Center vertically, if needed */
+    margin-top: 20px; /* Optional: Add some space before the button */
+}
+
+button.clear-order {
+    outline: none;
+    border: 0;
+    background: red !important;
+    padding: 10px 20px;
+    color: #fff !important;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+button.clear-order:hover {
+    transform: scale(1.05);
+}
+
+button.clear-order:active {
+    transform: scale(0.95);
 }
 
 .receipt,
@@ -584,7 +630,7 @@ button.clear-order:active {
 @media (max-width: 768px) {
     .checkout-container,
     .receipt {
-        max-height: 150px; /* Slightly smaller max height for mobile */
+        max-height: 235px; /* Slightly smaller max height for mobile */
     }
 }
 

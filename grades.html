@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Your script goes here -->
     <script>
         $(document).ready(function () {
             console.log("Document is ready");
@@ -46,6 +45,11 @@
 
                 $(".num").on("keydown", function (event) {
                     event.preventDefault();
+                });
+
+                // Home button click event listener
+                $("#homeButton").on("click", function () {
+                    window.location.assign('index.html?_ijt=ph8timkjv01al59m1rp9ha68ag&_ij_reload=RELOAD_ON_SAVE');
                 });
             }
 
@@ -226,16 +230,5 @@
         </div>
     </div>
     <div class="receipt-placeholder"></div>
-
-    <script>
-        $(document).ready(function () {
-            // Your existing jQuery code
-
-            // Home button click event listener
-            $("#homeButton").on("click", function () {
-                window.location.href = '/';
-            });
-        });
-    </script>
 </body>
 </html>
