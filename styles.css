@@ -555,7 +555,7 @@ button.clear-order:active {
     transform: scale(0.95);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
     body {
         flex-direction: column;
         padding: 10px;
