@@ -165,5 +165,27 @@
             { "id": 96, "grades": ["Grade 6"], "type": "full", "price": "928.70" },
             { "id": 97, "grades": ["Grade 7"], "type": "full", "price": "1170.00" }
         ]
+    },
+    {
+        "id": 11,
+        "name": "Amberfield College",
+        "logo": "./amberfieldCollege.png",
+        "packs": [
+            { "id": 98, "grades": ["Grade R"], "type": "full", "price": "2665.00" },
+            { "id": 99, "grades": ["Grade RR"], "type": "full", "price": "2064.00" },
+            { "id": 100, "grades": ["Grade RRR"], "type": "full", "price": "2234.00" },
+            { "id": 101, "grades": ["Grade 1"], "type": "full", "price": "3442.00" },
+            { "id": 102, "grades": ["Grade 2"], "type": "full", "price": "2874.00" },
+            { "id": 103, "grades": ["Grade 3"], "type": "full", "price": "3235.00" },
+            { "id": 104, "grades": ["Grade 4"], "type": "full", "price": "1868.80" },
+            { "id": 105, "grades": ["Grade 5"], "type": "full", "price": "2118.00" },
+            { "id": 106, "grades": ["Grade 6"], "type": "full", "price": "2285.50" },
+            { "id": 107, "grades": ["Grade 7"], "type": "full", "price": "2400.50" },
+            { "id": 108, "grades": ["Grade 8"], "type": "full", "price": "1533.30" },
+            { "id": 109, "grades": ["Grade 9"], "type": "full", "price": "1632.30" },
+            { "id": 110, "grades": ["Grade 10"], "type": "full", "price": "3033.90" },
+            { "id": 111, "grades": ["Grade 11"], "type": "full", "price": "2933.90" },
+            { "id": 112, "grades": ["Grade 12"], "type": "full", "price": "3020.40" }
+        ]
     }
 ]
