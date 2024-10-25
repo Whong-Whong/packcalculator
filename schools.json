@@ -104,7 +104,11 @@
             { "id": 63, "grades": ["Grade 0"], "type": "full", "price": "1035.00" },
             { "id": 64, "grades": ["Grade 1"], "type": "full", "price": "991.00" },
             { "id": 65, "grades": ["Grade 2"], "type": "full", "price": "782.00" },
-            { "id": 66, "grades": ["Grade 3"], "type": "full", "price": "1066.00" }
+            { "id": 66, "grades": ["Grade 3"], "type": "full", "price": "1066.00" },
+            {"id": 113, "grades": ["Grade 4"], "type": "full", "price": "1521.20"},
+            {"id": 114, "grades": ["Grade 5"], "type": "full", "price": "1559.60"},
+            {"id": 115, "grades": ["Grade 6"], "type": "full", "price": "2609.90"},
+            {"id": 116, "grades": ["Grade 7"], "type": "full", "price": "2139.20"}
         ]
     },
     {
