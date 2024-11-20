@@ -191,5 +191,26 @@
             { "id": 111, "grades": ["Grade 11"], "type": "full", "price": "2933.90" },
             { "id": 112, "grades": ["Grade 12"], "type": "full", "price": "3020.40" }
         ]
+    },
+    {"id": 12,
+        "name": "Pinnacle College Copperleaf",
+        "logo": "./pinnacleCollegeCopperleaf.png",
+        "packs": [
+            { "id": 113, "grades": ["GRADE 0"], "type": "full", "price": "1982.50" },
+            { "id": 114, "grades": ["GRADE 00"], "type": "full", "price": "1772.70" },
+            { "id": 115, "grades": ["Grade 1"], "type": "full", "price": "2466.40" },
+            { "id": 116, "grades": ["Grade 2"], "type": "full", "price": "2257.00" },
+            { "id": 117, "grades": ["Grade 3"], "type": "full", "price": "1972.60" },
+            { "id": 118, "grades": ["Grade 4"], "type": "full", "price": "1524.30" },
+            { "id": 119, "grades": ["Grade 5"], "type": "full", "price": "1366.60" },
+            { "id": 120, "grades": ["Grade 6"], "type": "full", "price": "1313.00" },
+            { "id": 121, "grades": ["Grade 7"], "type": "full", "price": "1532.00" },
+            { "id": 122, "grades": ["Grade 8"], "type": "full", "price": "1021.10" },
+            { "id": 123, "grades": ["Grade 9"], "type": "full", "price": "1049.00" },
+            { "id": 124, "grades": ["Grade 10"], "type": "full", "price": " 996.10" },
+            { "id": 125, "grades": ["Grade 11"], "type": "full", "price": "1077.80" },
+            { "id": 126, "grades": ["Grade 12"], "type": "full", "price": "1028.50" }
+        ]
+
     }
 ]
