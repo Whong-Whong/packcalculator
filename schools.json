@@ -211,6 +211,15 @@
             { "id": 125, "grades": ["Grade 11"], "type": "full", "price": "1077.80" },
             { "id": 126, "grades": ["Grade 12"], "type": "full", "price": "1028.50" }
         ]
-
+    },
+    {"id": 13,
+        "name": "Laerskool Monumentpark",
+        "logo": "./laerskoolMonumentpark.png",
+        "packs": [
+            { "id": 127, "grades": ["GRADE 1"], "type": "full", "price": "1069.00" },
+            { "id": 128, "grades": ["GRADE 2"], "type": "full", "price": "979.00" },
+            { "id": 129, "grades": ["Grade 3"], "type": "full", "price": "748.00" },
+            { "id": 130, "grades": ["Grade R"], "type": "full", "price": "845.00" }
+        ]
     }
 ]
