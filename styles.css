@@ -187,9 +187,6 @@ li.pack-card {
 
 }
 
-li.pack-card:hover {
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-}
 
 li.pack-card .pack-content {
     width: 100%;
