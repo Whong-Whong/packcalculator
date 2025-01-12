@@ -241,7 +241,7 @@
     },
     {"id": 15,
         "name": "The Bridge",
-        "logo": "./thebridge.png",
+        "logo": "./theBridge.png",
         "packs": [
             { "id": 142, "grades": ["GRADE 0"], "type": "full", "price": "1165.00" },
             { "id": 143, "grades": ["GRADE 1"], "type": "full", "price": "1260.00" },
@@ -256,3 +256,4 @@
         ]
     }
 ]
+
