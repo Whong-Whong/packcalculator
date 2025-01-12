@@ -252,7 +252,7 @@
             { "id": 148, "grades": ["GRADE 6"], "type": "full", "price": "2200.00" },
             { "id": 149, "grades": ["GRADE 7"], "type": "full", "price": "1750.00" },
             { "id": 150, "grades": ["GRADE 8"], "type": "full", "price": "1680.00" },
-            { "id": 151, "grades": ["GRADE 9"], "type": "full", "price": "1680.00" },
+            { "id": 151, "grades": ["GRADE 9"], "type": "full", "price": "1680.00" }
         ]
     }
 ]
