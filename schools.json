@@ -160,14 +160,14 @@
         "name": "Laerskool Elarduspark",
         "logo": "./lsElarduspark.png",
         "packs": [
-            { "id": 90, "grades": ["Grade R"], "type": "full", "price": "580.00" },
-            { "id": 91, "grades": ["Grade 1"], "type": "full", "price": "1520.00" },
-            { "id": 92, "grades": ["Grade 2"], "type": "full", "price": "1014.00" },
-            { "id": 93, "grades": ["Grade 3"], "type": "full", "price": "895.00" },
-            { "id": 94, "grades": ["Grade 4"], "type": "full", "price": "948.60" },
-            { "id": 95, "grades": ["Grade 5"], "type": "full", "price": "926.80" },
-            { "id": 96, "grades": ["Grade 6"], "type": "full", "price": "928.70" },
-            { "id": 97, "grades": ["Grade 7"], "type": "full", "price": "1170.00" }
+            { "id": 90, "grades": ["Grade R"], "type": "full", "price": "570.20" },
+            { "id": 91, "grades": ["Grade 1"], "type": "full", "price": "1443.80" },
+            { "id": 92, "grades": ["Grade 2"], "type": "full", "price": "863.00" },
+            { "id": 93, "grades": ["Grade 3"], "type": "full", "price": "680.70" },
+            { "id": 94, "grades": ["Grade 4"], "type": "full", "price": "832.70" },
+            { "id": 95, "grades": ["Grade 5"], "type": "full", "price": "739.10" },
+            { "id": 96, "grades": ["Grade 6"], "type": "full", "price": "838.20" },
+            { "id": 97, "grades": ["Grade 7"], "type": "full", "price": "1217.20" }
         ]
     },
     {
