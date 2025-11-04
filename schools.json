@@ -144,6 +144,7 @@
         "name": "Alberton Primary",
         "logo": "./albertonPrimary.png",
         "packs": [
+            { "id": 88, "grades": ["Grade R"], "type": "full", "price": "605.00" },
             { "id": 81, "grades": ["Grade 1"], "type": "full", "price": "967.00" },
             { "id": 82, "grades": ["Grade 2"], "type": "full", "price": "721.00" },
             { "id": 83, "grades": ["Grade 3"], "type": "full", "price": "696.00" },
@@ -151,7 +152,6 @@
             { "id": 85, "grades": ["Grade 5"], "type": "full", "price": "672.00" },
             { "id": 86, "grades": ["Grade 6"], "type": "full", "price": "662.00" },
             { "id": 87, "grades": ["Grade 7"], "type": "full", "price": "758.00" },
-            { "id": 88, "grades": ["Grade R"], "type": "full", "price": "605.00" },
             { "id": 89, "grades": ["Grade LSEN"], "type": "full", "price": "613.00" }
         ]
     },
