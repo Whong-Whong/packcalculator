@@ -254,6 +254,17 @@
             { "id": 150, "grades": ["GRADE 8"], "type": "full", "price": "1680.00" },
             { "id": 151, "grades": ["GRADE 9"], "type": "full", "price": "1680.00" }
         ]
+    },
+  {"id": 16,
+        "name": "Laerskool Bekker",
+        "logo": "./bekker.png",
+        "packs": [
+            { "id": 152, "grades": ["GRADE 1"], "type": "full", "price": "690.00" },
+            { "id": 153, "grades": ["GRADE 2"], "type": "full", "price": "700.00" },
+            { "id": 154, "grades": ["GRADE 3"], "type": "full", "price": "590.00" },
+            { "id": 155, "grades": ["GRADE R"], "type": "full", "price": "380.00" },
+            { "id": 156, "grades": ["GRADE RRR-RR"], "type": "full", "price": "470.00" }
+        ]
     }
 ]
 
